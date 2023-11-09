@@ -4,20 +4,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
   <title>Animais Fantásticos</title>
 </head>
 
 <body>
   <nav class="menu">
-    <li><a href="#animais">Animais</a></li>
-    <li><a href="#faq">Faq</a></li>
-    <li><a href="#contato">Contato</a></li>
-    <li><a href="https//:www.cnnbrasil.com.br/tudo-sobre/animais/">Outras fontes ➡</a></li>
+    <ul>
+      <li><a href="#animais">Animais</a></li>
+      <li><a href="#faq">Faq</a></li>
+      <li><a href="#contato">Contato</a></li>
+      <li><a href="https//:www.cnnbrasil.com.br/tudo-sobre/animais/">Outras fontes ➡</a></li>
+    </ul>
   </nav>
   <section class="grid-section animais" id="animais">
-    <h1>Animais Fantásticos</h1>
-    <ul>
+    <h1 class="titulo">Animais Fantásticos</h1>
+    <ul class="animais-lista">
       <li><img src="./assets/img/imagem1.jpg"></li>
       <li><img src="./assets/img/imagem2.jpg"></li>
       <li><img src="./assets/img/imagem3.jpg"></li>
@@ -65,8 +70,8 @@
   </section>
 
   <section class="grid-section faq" id="faq">
-    <h1>FAQ</h1>
-    <dl>
+    <h1 class="titulo">FAQ</h1>
+    <dl class="faq-lista">
       <dt>Qual a idade dos animais?</dt>
       <dd>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, tempora architecto numquam quo maiores harum?</dd>
 
@@ -82,7 +87,7 @@
   </section>
 
   <section class="grid-section contato" id="contato">
-    <h1>Contato</h1>
+    <h1 class="titulo">Contato</h1>
     <div class="mapa">
       <img src="./assets/img/mapa.png">
     </div>
