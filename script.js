@@ -57,3 +57,23 @@ function initScrollSuave() {
 }
 
 initScrollSuave();
+
+function initAnimacaoScroll() {
+  const sections = document.querySelectorAll('.js-scroll');
+  sections[0].classList.add('ativo');
+
+  function animaScroll() {
+    sections.forEach((section) => {
+      const distancia = section.offsetTop;
+      console.log(distancia);
+      const sectionTop = section.getBoundingClientRect().top;
+      if (sectionTop < 300) {
+        section.classList.add('ativo');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', animaScroll);
+}
+
+initAnimacaoScroll();
