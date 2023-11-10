@@ -232,3 +232,35 @@ body {
     transform: translate3d(0, 0, 0);
   }
 }
+
+.js-accordion dd{
+  display: none;
+}
+
+.js-accordion dt:after {
+  content: '↴';
+  font-size: 25px;
+  margin-left: 10px;
+}
+
+.js-accordion dt.ativo::after {
+  content: '↰';
+  font-size: 25px;
+  margin-left: 10px;
+}
+
+.js-accordion dd.ativo {
+  display: block;
+  animation: slideDown 1s forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 50px;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
