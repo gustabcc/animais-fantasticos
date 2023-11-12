@@ -134,6 +134,7 @@ body {
   margin-top: 2rem;
   margin-bottom: .5rem;
   color: var(--subtitle-color);
+  cursor: pointer;
 }
 
 .faq-lista dt:before {
@@ -213,16 +214,25 @@ body {
   }
 }
 
-.js-tabcontent section {
+[data-tab="content"] section {
   display: none;
 }
 
-.js-tabcontent section.ativo {
+[data-tab="content"] section.ativo {
   display: block;
-  animation: show 1s forwards;
 }
 
-@keyframes show {
+[data-tab="content"] section.ativo.show-right {
+  display: block;
+  animation: show-right 1s forwards;
+}
+
+[data-tab="content"] section.ativo.show-down {
+  display: block;
+  animation: show-down 1s forwards;
+}
+
+@keyframes show-right {
   from {
     opacity: 0;
     transform: translate3d(-30px, 0, 0);
@@ -233,23 +243,34 @@ body {
   }
 }
 
-.js-accordion dd{
+@keyframes show-down {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+[data-anima="accordion"] dd{
   display: none;
 }
 
-.js-accordion dt:after {
+[data-anima="accordion"] dt:after {
   content: '↴';
   font-size: 25px;
   margin-left: 10px;
 }
 
-.js-accordion dt.ativo::after {
+[data-anima="accordion"] dt.ativo::after {
   content: '↰';
   font-size: 25px;
   margin-left: 10px;
 }
 
-.js-accordion dd.ativo {
+[data-anima="accordion"] dd.ativo {
   display: block;
   animation: slideDown 1s forwards;
 }
@@ -264,13 +285,13 @@ body {
   }
 }
 
-.js-scroll {
+[data-anime="scroll"] {
   opacity: 0;
   transform: translate3d(-30px, 0, 0);
   transition: .3s;
 }
 
-.js-scroll.ativo {
+[data-anime="scroll"].ativo {
   opacity: 1;
   transform: translate3d(0, 0, 0)
 }
