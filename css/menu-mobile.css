@@ -1,0 +1,66 @@
+:root {
+  --secondary-color: #222;
+  --body-background-color: #faf6ed;
+  --nav-background-color: #fb5;
+  --subtitle-color: #e54;
+}
+
+[data-menu="button"] {
+  display: none;
+}
+
+[data-menu="button"].ativo:before {
+  content: '';
+  transform: rotate(90deg);
+}
+
+@media (max-width: 700px) {
+  [data-menu="button"] {
+    display: flex;
+    align-items: center;
+    background-color: #222;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-family: monospace;
+    font-weight: bold;
+    color: #FFF;
+    cursor: pointer;
+    margin: 10px;
+    position: relative;
+    z-index: 300;
+  }
+
+  [data-menu="button"]:before {
+    content: '';
+    display: inline-block;
+    height: 2px;
+    width: 12px;
+    background-color: #FFF;
+    box-shadow: 0 4px #FFF, 0 -4px #FFF;
+    margin-right: 4px;
+    transition: transform .5s;
+  }
+
+  [data-menu="lista"] {
+    display: none;
+    position: absolute;
+    width: 100px;
+    background-color: var(--nav-background-color);
+    z-index: 200;
+    top: 0;
+    padding: 60px 0 20px 0;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, .2);
+  }
+
+  [data-menu="lista"].ativo {
+    display: none;
+    animation: show-right .3s forwards;
+  }
+
+  .dropdown-menu {
+    position: static;
+    border: none;
+  }
+}
