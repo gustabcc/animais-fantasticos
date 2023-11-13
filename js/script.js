@@ -4,10 +4,11 @@ import initAccordion from './modules/accordionFaq.js';
 import initTabNav from './modules/tabNav.js';
 import initModal from './modules/modal.js';
 import tooltip from './modules/tooltip.js';
-
+import dropdownMenu from './modules/dropdown.js';
 initScrollSuave();
 initAnimacaoScroll();
 initAccordion();
 initTabNav();
 initModal();
 tooltip();
+dropdownMenu();
